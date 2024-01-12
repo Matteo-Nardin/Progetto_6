@@ -6,7 +6,7 @@ import { Grid3x3GapFill, GridFill } from 'react-bootstrap-icons';
 function Genres() {
     return (
         <>
-          <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between">
                 <div className="d-flex">
                     <h2 className="mb-4">TV Shows</h2>
                     <div className="dropdown ml-4 mt-1">

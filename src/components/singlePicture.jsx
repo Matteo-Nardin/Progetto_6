@@ -1,17 +1,11 @@
-// import SingleComment from "./SingleComment"
-import ListGroup from 'react-bootstrap/ListGroup';
-
-//array come props
-
-// const CommentList = ({commenti}) => (
 const SinglePicture = (props) => (
-    <ListGroup as="ol" numbered>
-        {props.commenti.map((b)=>{
-         return console.log(b.Title);
-        // return <SingleComment pluto={b} ></SingleComment>
-        })}
-       
-    </ListGroup>
-  )
+    <>
+     
+        <div className="col mb-2 px-1">
+            <img className="img-fluid" src={props.src.Poster} alt={props.alt.Title} style={{maxWidth: "301px", maxHeight: "164px"}}/>
+        </div>
+     
+    </>
+)
   
-  export default SinglePicture
+export default SinglePicture

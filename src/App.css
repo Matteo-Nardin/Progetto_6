@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #221f1f;
+  background-color: #221f1f !important;
 }
 
 h2,
@@ -45,11 +45,12 @@ footer {
 
 .footer-links a {
   color: #838383;
+  text-decoration: none;
 }
 
 .footer-button {
-  color: #838383;
-  border-color: #838383;
+  color: #838383 !important;
+  border-color: #838383 !important;
 }
 
 .copyright {
@@ -63,4 +64,8 @@ footer {
 
 .col img:hover {
   transform: scale(1.1);
+}
+
+.navbar-toggler{
+  border-color: rgba(255,255,255,.1) !important;
 }

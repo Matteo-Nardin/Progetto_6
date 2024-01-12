@@ -3,6 +3,7 @@ import { Component } from "react"
 // import Nav from 'react-bootstrap/Nav';
 // import Navbar from 'react-bootstrap/Navbar';
 import { Search, Bell, PersonCircle } from 'react-bootstrap-icons';
+import Logo from '../assets/logo.png'
 
 class NavBar extends Component{
     render(){
@@ -35,7 +36,7 @@ class NavBar extends Component{
                         style={{backgroundColor: "#221f1f"}}
                     >
                         <a className="navbar-brand" href="#Link">
-                        <img src="assets/logo.png" style={{width: "100px", height: "55px"}} alt=""/>
+                            <img src={Logo} style={{width: "100px", height: "55px"}} alt=""/>
                         </a>
                         <button
                         className="navbar-toggler"
@@ -50,27 +51,27 @@ class NavBar extends Component{
                         </button>
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item">
-                                <a className="nav-link font-weight-bold" href="#Link" >Home <span className="sr-only">(current)</span></a>
-                            </li>
-                            <li className="nav-item active">
-                                <a className="nav-link font-weight-bold" href="#Link">TV Shows</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link font-weight-bold" href="#Link">Movies</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link font-weight-bold" href="#Link">Recently Added</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link font-weight-bold" href="#Link">My List</a>
-                            </li>
-                        </ul>
-                        <Search color="#f5f5f1" size={20} />
-                        <div id="kids">KIDS</div>
-                            <Bell color="#f5f5f1" size={20} />
-                            <PersonCircle color="#f5f5f1" size={20} />
+                            <ul className="navbar-nav mr-auto">
+                                <li className="nav-item">
+                                    <a className="nav-link font-weight-bold" href="#Link" >Home <span className="sr-only">(current)</span></a>
+                                </li>
+                                <li className="nav-item active">
+                                    <a className="nav-link font-weight-bold" href="#Link">TV Shows</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link font-weight-bold" href="#Link">Movies</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link font-weight-bold" href="#Link">Recently Added</a>
+                                </li>
+                                <li className="nav-item">
+                                    <a className="nav-link font-weight-bold" href="#Link">My List</a>
+                                </li>
+                            </ul>
+                            <Search color="#f5f5f1" size={20} />
+                            <div id="kids">KIDS</div>
+                                <Bell color="#f5f5f1" size={20} />
+                                <PersonCircle color="#f5f5f1" size={20} />
                         </div>
                     </nav>
                 

@@ -1,7 +1,8 @@
 import { Component } from "react";
-import Button from 'react-bootstrap/Button';
+//import { Col, Row, Image } from 'react-bootstrap'
 //import Image from 'react-bootstrap/Image';
 import SinglePicture from "./singlePicture";
+//import key from "../apiKey.json"
 
 class Gallery extends Component{
 
@@ -9,26 +10,13 @@ class Gallery extends Component{
         reservations: []
     }
 
-    //80f3bc8c
-    // getProduct = () => {
-
-    //     fetch('http://www.omdbapi.com/?i=tt3896198&apikey=80f3bc8c&s=harry%20potter',
-    //     {
-    //         method: 'GET',
-    //     }
-    //     )
-    //     .then(response => response.json())
-    //     .then(json => this.setState({ reservations: json }))
-    //     .catch(err => console.error(err))
-    // }
-
     componentDidMount = async () => {
         try {
-            const response = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=80f3bc8c&s=harry%20potter"
+            const response = await fetch("http://www.omdbapi.com/?i=tt3896198&apikey=80f3bc8c&s="+this.props.title
             )
             if(response.ok) {
                 const data = await response.json();
-                this.setState({ reservations: data });
+                this.setState({ reservations: data.Search });
             } else {
                 console.log('error while fetching')
             }
@@ -37,22 +25,22 @@ class Gallery extends Component{
         console.log(this.state.reservations.Search)  
     }
 
-    stato = () => {console.log(this.state.reservations.Search)}
+    stato = () => {console.log(this.state.reservations)}
 
     render(){
         console.log(this.state.reservations.Search, "render")  
         return(
             <>
-                {/* <div>
-                    {this.state.reservations.Search.map( (x) => <p>{x.Title}</p> ) }
-                </div> */}
-               
-
-                {/* <Image src={this.state.reservations.Search} thumbnail style={{width: "250px", height: "250px"}}/> */}
-             
-                {/* <Button variant="primary" onClick={this.getProduct}>Primary</Button> */}
-                <Button variant="primary" onClick={this.stato}>State</Button>
-                <SinglePicture immagini={this.state.reservations}></SinglePicture>
+            {/* {console.log(this.state.reservations, "return") } */}
+                <h4> </h4>
+                <div className="row row-cols-1 row-cols-sm-2 row-cols-lg-4 row-cols-xl-6 mb-4 no-gutters text-center">
+                    {this.state.reservations.map(x =>
+                        <SinglePicture src={x} alt={x}></SinglePicture>
+                        
+                        // <Image src={x.Poster} alt={x.Title} fluid className='' />
+                        )
+                    }
+                </div>
             </>
 
         );
